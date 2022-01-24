@@ -1,9 +1,10 @@
 const StringManipulations = require('./atividade1');
 
+//port StringManipulations from "./atividade1";
+
 let stringManip, shortStringManip, strStringManip, shortStrStringManip;
 
 describe("String Manipulations class mock", () => {
-
 
     beforeEach(() => {
 
@@ -11,7 +12,7 @@ describe("String Manipulations class mock", () => {
         jest.spyOn(StringManipulations.prototype, 'findLastMatch').mockImplementation(() => 'g');
 
     });
-
+    
     afterEach(() => {
 
         jest.clearAllMocks();
@@ -27,8 +28,8 @@ describe("String Manipulations class mock", () => {
 
     it('should call the String Manipulations constructor', () => {
 
-        strStringManip = 't';
-        stringManip = new StringManipulations(shortStringManip);
+        shortStrStringManip = 't';
+        shortStringManip = new StringManipulations(shortStrStringManip);
         
     });
 
@@ -48,7 +49,7 @@ describe("String Manipulations class", () => {
     test("if returns a last match substring", () => {
 
         const output = 'g';
-        const actual = stringManip.findFirstMatch("testing");
+        const actual = stringManip.findLastMatch("testing");
         expect(actual).toEqual(output);
 
     });
@@ -74,7 +75,7 @@ describe("String Manipulations class", () => {
     test("if returns a first and last two strings empty", () => {
 
         const output = '';
-        const actual = stringManip.both_ends()
+        const actual = shortStringManip.both_ends()
         expect(actual).toEqual(output);
 
     });
@@ -82,7 +83,7 @@ describe("String Manipulations class", () => {
     test("if returns string changed to *", () => {
 
         const output = '*abble';
-        const actual = stringManip.fix_start("babble");
+        const actual = shortStringManip.fix_start("babble");
         expect(actual).toEqual(output);
 
     });

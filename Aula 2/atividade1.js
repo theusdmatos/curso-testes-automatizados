@@ -1,3 +1,4 @@
+
 class StringManipulations {
 
     /**
@@ -76,9 +77,11 @@ class StringManipulations {
     fix_start(str1) {
 
 
-        let char = str1.charAt(0);
+        let char= str1.charAt(0);
         return str1.replace(char, "*");
 
     }
 
 }
+
+module.exports = StringManipulations;
