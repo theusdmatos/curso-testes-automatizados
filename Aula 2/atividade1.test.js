@@ -1,7 +1,5 @@
 const StringManipulations = require('./atividade1');
 
-//port StringManipulations from "./atividade1";
-
 let stringManip, shortStringManip, strStringManip, shortStrStringManip;
 
 describe("String Manipulations class mock", () => {
