@@ -10,9 +10,36 @@
 //
 //
 // -- This is a parent command --
+
+import field from '../support/fields'
+
 Cypress.Commands.add('clickButton', (label) => {
-    cy.get('a').contains(label).click();
-  });
+  cy.get('a').contains(label).click();
+});
+
+
+Cypress.Commands.add('accessWebSite', (label) => {
+  cy.visit('http://localhost:3000/');
+});
+
+Cypress.Commands.add('writeFields', (label) => {
+  const text = [
+
+    field.TEXT.skillNameText,
+    field.TEXT.developersText,
+    field.TEXT.technologiesText,
+    field.TEXT.rolesText
+
+  ]
+
+  text.forEach(text => {
+
+    cy.get(text)
+      .type('test')
+      .should('have.value', 'test')
+
+  })
+});
 //
 // -- This is a child command --
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
