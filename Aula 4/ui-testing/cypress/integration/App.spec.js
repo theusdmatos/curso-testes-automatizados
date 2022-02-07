@@ -1,16 +1,16 @@
 describe('App Developers Skills', () => {
 
     beforeEach(() => {
-        cy.accessWebSite;
+        cy.accessWebSite();
     });
     it('should load skills list as the button is clicked', () => {
-        cy.get(field.BOTTON.addSkills).click();
+        cy.get(field.BUTTON.addSkills).click();
         cy.get('li').should('be.visible');
         cy.get('ul').should('be.visible');
     });
     it('should load one skill after input and click search button', () => {
         cy.get(field.TEXT.skillNameText).type('front-end');
-        cy.get(field.BOTTON.addSkills).click();
+        cy.get(field.BUTTON.addSkills).click();
         cy.get('li').should('be.visible');
         cy.contains('Skill Name: front-end');
     });
@@ -22,7 +22,7 @@ describe('App Developers Skills', () => {
     });
 
     it('should load skills list as the button is clicked', () => {
-        cy.get(field.BOTTON.addSkills).click()
+        cy.get(field.BUTTON.addSkills).click()
         cy.get('li').should('be.visible')
         cy.get('ul').should('be.visible')
     });
@@ -37,8 +37,8 @@ describe('App Developers Skills', () => {
         cy.writeFields()
     })
     it('buttons', () => {
-        cy.get(field.BOTTON.addSkills).should('be.visible')
-        cy.get(field.BOTTON.addSkills).should('have.text', 'Add Skills')
-        cy.get(field.BOTTON.addSkills).click()
+        cy.get(field.BUTTON.addSkills).should('be.visible')
+        cy.get(field.BUTTON.addSkills).should('have.text', 'Add Skills')
+        cy.get(field.BUTTON.addSkills).click()
     })
 });

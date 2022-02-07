@@ -17,12 +17,11 @@ Cypress.Commands.add('clickButton', (label) => {
   cy.get('a').contains(label).click();
 });
 
-
-Cypress.Commands.add('accessWebSite', (label) => {
+Cypress.Commands.add('accessWebSite', () => {
   cy.visit('http://localhost:3000/');
 });
 
-Cypress.Commands.add('writeFields', (label) => {
+Cypress.Commands.add('writeFields', () => {
   const text = [
 
     field.TEXT.skillNameText,

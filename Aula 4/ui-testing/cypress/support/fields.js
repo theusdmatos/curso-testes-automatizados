@@ -1,4 +1,3 @@
-/// <reference types="cypress" />
 
 const fields = {
     TITLE: {
@@ -16,7 +15,7 @@ const fields = {
         rolesText: '.App > :nth-child(9)',
     },
 
-    BOTTON: {
+    BUTTON: {
         addSkills: '#load-skills-button',
     }
 }
