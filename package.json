@@ -19,7 +19,9 @@
   "devDependencies": {
     "jest": "^27.4.7"
   },
-  "dependencies": {},
+  "dependencies": {
+    "cypress": "^9.4.1"
+  },
   "jest": {
     "modulePathIgnorePatterns": [
       "<rootDir>/Aula 1"

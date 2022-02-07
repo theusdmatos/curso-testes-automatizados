@@ -51,6 +51,10 @@
   },
   "devDependencies": {
     "@types/enzyme-adapter-react-16": "^1.0.6",
-    "enzyme-adapter-react-16": "^1.15.6"
+    "enzyme-adapter-react-16": "^1.15.6",
+    "html-webpack-plugin": "^5.5.0",
+    "npm-install-webpack-plugin": "^4.0.5",
+    "webpack": "^5.68.0",
+    "webpack-cli": "^4.9.2"
   }
 }
